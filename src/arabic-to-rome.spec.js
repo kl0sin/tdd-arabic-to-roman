@@ -4,4 +4,21 @@ describe('Arabic to Rome', function() {
     it('has tests', function() {
         expect(arabicToRome).toBeDefined();
     });
+
+    [
+        {value: 1, result: 'I'},
+        {value: 2, result: 'II'},
+        {value: 3, result: 'III'},
+        {value: 4, result: 'IV'},
+        {value: 5, result: 'V'},
+        {value: 6, result: 'VI'},
+        {value: 7, result: 'VII'},
+        {value: 8, result: 'VIII'},
+        {value: 9, result: 'IX'},
+        {value: 10, result: 'X'}
+    ].forEach(function (testCase) {
+        it('should return ' + testCase.result + ' for ' + testCase.value + ' on input', function() {
+            expect(arabicToRome(testCase.value)).toBe(testCase.result);
+        });
+    });
 });
