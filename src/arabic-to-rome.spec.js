@@ -5,6 +5,14 @@ describe('Arabic to Rome', function() {
         expect(arabicToRome).toBeDefined();
     });
 
+    it('should return error message for 0', function() {
+        expect(arabicToRome(0)).toBe('There is no 0 number in Roman numerals');
+    });
+
+    it('should return error message for to big number', function() {
+        expect(arabicToRome(4000)).toBe('The biggest number in Roman numerals is 3999');
+    });
+
     [
         {value: 1, result: 'I'},
         {value: 2, result: 'II'},
