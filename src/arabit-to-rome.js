@@ -15,4 +15,4 @@ module.exports = function arabicToRome(number) {
         }
         return result;
     }
-}
+};
